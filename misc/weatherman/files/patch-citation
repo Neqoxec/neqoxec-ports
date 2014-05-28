@@ -1,0 +1,20 @@
+--- weatherman
++++ weatherman
+@@ -265,8 +265,6 @@
+         PADLEN=$((26 - ${#DEWPOINT} + $PADOFFSET)); for((n=1;n<=$PADLEN;n++)); do echo -n " "; done
+ 
+         echo "Moonphase: $MOONPHASE"
+-        echo ""
+-        echo "Data provided by WeatherBug.com"
+     fi
+ 
+ fi
+@@ -353,8 +351,6 @@
+         echo ""
+     done
+ 
+-    echo -e "\nData provided by WeatherBug.com"
+-
+ fi
+ 
+ if [[ $SAVE_OPTIONS ]]; then
