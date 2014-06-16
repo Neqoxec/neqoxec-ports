@@ -1,0 +1,3 @@
+Curses interface for remotely accessing the BitTorrent client Transmission via RPC
+
+WWW: https://github.com/fagga/transmission-remote-cli
