@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# $FreeBSD$
+#
+# PROVIDE: syncthingd
+# REQUIRE:
+# BEFORE: LOGIN
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name=syncthingd
+rcvar=${name}_enable
+start_cmd="${name}_start"
+pidfile="/var/run/${name}.pid"
+
+syncthingd_start()
+{
+        /usr/sbin/daemon -u $syncthingd_user\
+                /usr/local/bin/syncthing-bin -home "${syncthingd_home}"
+}
+
+load_rc_config $name
+: ${syncthingd_enable:=no}
+: ${syncthingd_user:=syncer}
+: ${syncthingd_home:=/usr/home/syncer/.config/syncthing}
+
+run_rc_command "$1"
