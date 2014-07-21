@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	syncthing-bin
-PORTVERSION=	0.8.17
-PORTREVISION=	2
+PORTVERSION=	0.8.19
+PORTREVISION=	1
 CATEGORIES=	net-p2p
 MASTER_SITES= https://github.com/calmh/syncthing/releases/download/v${PORTVERSION}/
 DISTFILES=	syncthing-freebsd-amd64-v${PORTVERSION}.tar.gz
